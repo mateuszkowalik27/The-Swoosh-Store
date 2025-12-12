@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'NikeFontTitle';
+    src: url('../../../assets/fonts/Futura Std Extra Bold Condensed Oblique.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NikeFontLight';
+    src: url('../../../assets/fonts/Futura Std Book.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    color: white;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.67),
+            transparent
+    );
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-image: linear-gradient(
+            to bottom,
+            transparent,
+            rgba(0, 0, 0, 0.67)
+    );
+}
+.nike {
+    font-size: 400px;
+    margin: 0;
+    font-family: NikeFontTitle, serif;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+}
+
+.left-block {
+    margin-top: auto;
+    margin-bottom: 30%;
+    margin-left: 10%;
+    float: left;
+    font-family: NikeFontLight, serif;
+}
+.left-block h1 {
+    font-size: 250%;
+}
+.info p{
+    margin: 4px;
+    font-size: 125%;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-block {
+}
+.size {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.size p {
+    font-size: 110%;
+    font-weight: bold;
+    width: 17%;
+    height: 40px;
+    border: 3px solid white;
+    border-radius: 1rem;
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+}
+.size p:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+.color-swatch {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#red:checked ~ [for="red"].color-swatch,
+[for="red"].color-swatch {
+    background-color: rgb(208, 20, 35);
+}
+#blue:checked ~ [for="blue"].color-swatch,
+[for="blue"].color-swatch {
+    background-color: rgb(4, 114, 158);
+}
+#green:checked ~ [for="green"].color-swatch,
+[for="green"].color-swatch {
+    background-color: rgb(1, 102, 62);
+}
+#purple:checked ~ [for="purple"].color-swatch,
+[for="purple"].color-swatch {
+    background-color: rgb(140, 35, 200);
+}
+input[type="radio"]:checked + .color-swatch {
+    border: 5px solid white;
+    transform: scale(1.1);
+}

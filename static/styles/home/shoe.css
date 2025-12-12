@@ -1,0 +1,40 @@
+@keyframes sway {
+    0% {
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(3deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+}
+.shoe-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
+.shoe-img {
+    position: absolute;
+    height: 600px;
+    width: auto;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(500%, -50%);
+    transition: all 0.7s ease-in-out;
+}
+.shoe-img.active {
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(-3deg);
+    opacity: 1;
+}
+
+.shoe-img.leaving {
+    z-index: 2;
+    transform: translate(-500%, -50%);
+    opacity: 1;
+}

@@ -1,0 +1,33 @@
+.background {
+    position: relative;
+    background-color: rgb(208, 20, 35);
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0.65) 10%,
+        rgba(255, 255, 255, 0.6) 20%,
+        rgba(255, 255, 255, 0.5) 30%,
+        rgba(255, 255, 255, 0.4) 40%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.2) 60%,
+        rgba(255, 255, 255, 0.1) 70%,
+        transparent 80%
+    );
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 150vh 100vh;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    transition: background-color 0.7s ease-in-out;
+}
+.background.blue-active {
+    background-color: rgb(4, 114, 158);
+}
+.background.green-active {
+    background-color: rgb(1, 102, 62);
+}
+.background.purple-active {
+    background-color: rgb(140, 35, 200);
+}
