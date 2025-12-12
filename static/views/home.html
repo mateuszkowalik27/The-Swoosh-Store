@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../styles/home/main.css">
+    <link rel="stylesheet" href="../styles/home/header.css">
+    <link rel="stylesheet" href="../styles/home/footer.css">
     <link rel="stylesheet" href="../styles/home/background.css">
     <link rel="stylesheet" href="../styles/home/shoe.css">
     <script src="../auth/profile.js"></script>
+    <script src="../auth/user-data.js"></script>
+    <script src="../auth/logout.js"></script>
     <script src="../scripts/shoe-animation.js"></script>
 </head>
 <body>
@@ -18,7 +22,24 @@
             <img class="shoe-img" id="purple-shoe" src="../../assets/images/Air-Jordan-1-Purple.png" alt="Air Jordan Purple">
         </div>
         <header>
-            <h1></h1>
+            <div class="header-item">
+                <img src="../../assets/images/logo.png" alt="logo">
+            </div>
+            <div class="header-item-links">
+                <a href="home.html" class="animated-underline">BESTSELLERS</a>
+                <a href="" class="animated-underline">MEN</a>
+                <a href="" class="animated-underline">WOMAN</a>
+                <a href="" class="animated-underline">KIDS</a>
+            </div>
+            <div class="header-item auth" id="auth-links">
+                <a href="login.html">SIGN IN</a>
+                <a href="register.html">SIGN UP</a>
+            </div>
+            <div class="header-item profile" id="profile-area" style="display:none;">
+                <a href=""><img src="../../assets/images/shopping-bag.png" alt="Shopping Bag"></a>
+                <a href=""><img src="../../assets/images/profile.png" alt="Profile"></a>
+                <a href="#" id="logout-btn">LOGOUT</a>
+            </div>
         </header>
         <div class="main-container">
             <div class="left-block">
@@ -44,18 +65,18 @@
                     <p>46</p>
                     <p>47</p>
                 </div>
-                <div class="color-options">
-                  <input type="radio" name="color" id="red" data-color="red" checked>
-                  <label for="red" class="color-swatch"></label>
+                <div class="color-options" id="color-options-container">
+                    <input type="radio" name="color" id="red" data-color="red" checked>
+                    <label for="red" class="color-swatch"></label>
 
-                  <input type="radio" name="color" id="blue" data-color="blue">
-                  <label for="blue" class="color-swatch"></label>
+                    <input type="radio" name="color" id="blue" data-color="blue">
+                    <label for="blue" class="color-swatch"></label>
 
-                  <input type="radio" name="color" id="green" data-color="green">
-                  <label for="green" class="color-swatch"></label>
+                    <input type="radio" name="color" id="green" data-color="green">
+                    <label for="green" class="color-swatch"></label>
 
-                  <input type="radio" name="color" id="purple" data-color="purple">
-                  <label for="purple" class="color-swatch"></label>
+                    <input type="radio" name="color" id="purple" data-color="purple">
+                    <label for="purple" class="color-swatch"></label>
                 </div>
             </div>
             <div class="main">
@@ -64,9 +85,9 @@
             <div class="right-block">
             </div>
         </div>
-        <footer>
-            <h1></h1>
-        </footer>
+<!--        <footer>-->
+<!--            <p>Copyright © 2025 Mateusz Kowalik</p>-->
+<!--        </footer>-->
     </div>
 </body>
 </html>

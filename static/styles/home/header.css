@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'NikeFontLight';
+    src: url('../../../assets/fonts/Futura Std Book.ttf') format('truetype');
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-image: linear-gradient(
+            to top,
+            transparent,
+            rgba(0, 0, 0, 0.67)
+    );
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-item img{
+    height: 85px;
+    width: auto;
+}
+.header-item-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+.header-item-links a {
+    color: white;
+    text-decoration: none;
+    font-family: NikeFontLight, serif;
+    font-size: 115%;
+}
+.animated-underline {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px; /* Grubość linii */
+    background-color: white;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+.animated-underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+.auth a {
+    font-family: NikeFontLight, serif;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 10px;
+    font-size: 115%;
+    transition: all 0.2s ease-in-out;
+}
+.auth a:hover {
+    background-color: white;
+    color: black;
+}
+#profile-area, #auth-links {
+    display: flex;
+    gap: 20px;
+}
+.profile img {
+    height: 30px;
+    width: auto;
+}

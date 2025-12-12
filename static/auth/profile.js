@@ -1,25 +1,39 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const token = localStorage.getItem("accessToken");
-    const success = document.getElementById("success");
+document.addEventListener('DOMContentLoaded', () => {
+    checkAuthAndRenderHeader();
 
-    if (token && success) {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/users/me", {
-                method: "GET",
-                headers: {
-                    "Authorization": `Bearer ${token}`
-                }
-            });
-
-            if (response.ok) {
-                const userData = await response.json();
-                success.textContent = `Witaj, ${userData.name} ${userData.surname}`;
-            } else {
-                console.log("The session has expired or the token is invalid.");
-                localStorage.removeItem("accessToken");
-            }
-        } catch (error) {
-            console.error("Błąd podczas pobierania danych użytkownika:", error);
-        }
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', handleLogout);
     }
 });
+
+function checkAuthAndRenderHeader() {
+    const accessToken = localStorage.getItem('accessToken');
+
+    const authLinksDiv = document.getElementById('auth-links');
+    const profileAreaDiv = document.getElementById('profile-area');
+
+    if (!authLinksDiv || !profileAreaDiv) {
+        console.error("Brak wymaganych elementów nagłówka (auth-links lub profile-area) w HTML.");
+        return;
+    }
+
+    if (accessToken) {
+        authLinksDiv.style.display = 'none';
+        profileAreaDiv.style.display = 'flex';
+    } else {
+        authLinksDiv.style.display = 'flex';
+        profileAreaDiv.style.display = 'none';
+    }
+}
+
+function handleLogout(event) {
+    event.preventDefault();
+
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+
+    alert('Wylogowano pomyślnie.');
+
+    window.location.reload();
+}
