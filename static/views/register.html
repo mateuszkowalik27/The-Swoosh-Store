@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../styles/auth/main.css">
+    <link rel="stylesheet" href="../styles/auth/password.css">
+    <link rel="stylesheet" href="../styles/auth/animations.css">
+    <link rel="stylesheet" href="../styles/home/footer.css">
     <script src="../auth/register.js"></script>
 </head>
 <body>
-    <form>
-        <input type="text" id="name" placeholder="name">
-        <input type="text" id="surname" placeholder="surname">
-        <input type="text" id="email" placeholder="email">
-        <input type="text" id="date_birth" placeholder="date_birth">
-        <input type="text" id="password" placeholder="password">
-        <button type="button" onclick="dataPOST()">Send</button>
-    </form>
-    <div id="error" style="color: red;"></div>
+    <main>
+        <a href="home.html" class="animated-underline back">⇐ BACK</a>
+        <form>
+            <div class="title">
+                <h1>SIGN UP</h1>
+            </div>
+            <div class="form-item">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" placeholder="Enter your surname">
+                </div>
+            </div>
+            <div class="form-item">
+                <div>
+                    <label for="date_birth">Date of birth</label>
+                    <input type="text" id="date_birth" placeholder="DD-MM-YYYY" maxlength="10">
+                    <script src="../scripts/date-birth.js"></script>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" placeholder="Enter your e-mail">
+                </div>
+            </div>
+            <div class="form-item">
+                <div>
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <button type="button" id="hide-show" name="hide-show">
+                            <img src="../../assets/images/hide.png" id="hide-show-img" alt="hide-show">
+                        </button>
+                    </div>
+                    <script src="../scripts/password.js"></script>
+                </div>
+                <div>
+                    <label for="password_confirmation">Password confirmation</label>
+                    <input type="password" id="password_confirmation" placeholder="Confirm your password">
+                </div>
+            </div>
+            <div>
+                <button type="button" onclick="dataPOST()">SEND</button>
+            </div>
+            <div class="sign-in">
+                already have an account? <a href="login.html"class="animated-underline sign-in">SIGN IN</a>
+            </div>
+        </form>
+        <div id="error" style="color: red;"></div>
+    </main>
+    <footer>
+        <p>Copyright © 2025 Mateusz Kowalik</p>
+    </footer>
 </body>
 </html>

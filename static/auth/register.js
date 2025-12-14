@@ -13,7 +13,8 @@ async function dataPOST() {
                 surname: document.getElementById('surname').value,
                 email: document.getElementById("email").value,
                 date_birth: document.getElementById('date_birth').value,
-                password: document.getElementById("password").value
+                password: document.getElementById("password").value,
+                // confirm_password: document.getElementById("password_confirmation").value
             })
         });
 

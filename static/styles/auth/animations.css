@@ -1,0 +1,37 @@
+.back {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    text-decoration: none;
+    color: white;
+    font-family: NikeFontLight, sans-serif;
+    font-size: 115%;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.sign-in {
+    padding-top: 1%;
+}
+.sign-in a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: NikeFontLight, sans-serif;
+    font-size: 100%;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px; /* Grubość linii */
+    background-color: white;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+.animated-underline:hover::after {
+    width: 100%;
+    left: 0;
+}

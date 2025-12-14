@@ -68,6 +68,12 @@ def login_user(item: Login, remember_me: bool = False):
 def register_user(item: Register):
     cursor = conn.cursor()
     try:
+        # if (item.password != item.confirm_password):
+        #     raise HTTPException(
+        #         status_code=400,
+        #         detail="Passwords do not match."
+        #     )
+
         check_query = "SELECT email FROM users WHERE email = %s;"
         cursor.execute(check_query, (item.email,))
 
