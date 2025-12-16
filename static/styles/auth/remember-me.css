@@ -1,0 +1,28 @@
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 3% 0 3% 0;
+}
+.remember-me div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.remember-me label {
+    font-size: 130%;
+    user-select: none;
+}
+.remember-me input {
+    height: 18px;
+    width: 18px;
+    border: 2px solid #5C6BC0;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    position: relative;
+    display: inline-block;
+}

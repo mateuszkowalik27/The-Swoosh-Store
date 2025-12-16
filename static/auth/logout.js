@@ -14,6 +14,7 @@ async function logout() {
 
             if (response.ok) {
                 console.log("Serwer usunął refresh token. Wylogowanie zakończone sukcesem na serwerze.");
+                location.reload();
             } else {
                 console.warn("Serwer zwrócił błąd przy /logout (może token wygasł).", response.status);
             }
@@ -29,5 +30,4 @@ async function logout() {
     if (success) {
         success.textContent = "";
     }
-    alert("Wylogowano pomyślnie.");
 };

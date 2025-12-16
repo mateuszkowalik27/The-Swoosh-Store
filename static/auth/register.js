@@ -14,19 +14,20 @@ async function dataPOST() {
                 email: document.getElementById("email").value,
                 date_birth: document.getElementById('date_birth').value,
                 password: document.getElementById("password").value,
-                // confirm_password: document.getElementById("password_confirmation").value
+                password_confirm: document.getElementById("password_confirmation").value
             })
         });
 
         const data = await response.json();
 
         if (!response.ok) {
-            // pobiera detail z FastAPI i wyświetla
             error.textContent = data.detail;
             return;
         }
 
-        error.textContent = "";
+        error.textContent = "Registration completed successfully! Redirecting...";
+
+        window.location.href = "home.html";
 
     } catch (err) {
         error.textContent = "Server connection error.";

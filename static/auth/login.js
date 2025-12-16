@@ -31,13 +31,9 @@ async function dataPOST_login() {
             const userName = result.user.name;
             const userSurname = result.user.surname;
 
-            alert(`Zalogowano pomyślnie! Witaj, ${userName} ${userSurname}`);
             console.log(`Zalogowano pomyślnie! Witaj, ${userName} ${userSurname}`)
-            success.textContent = `Witaj, ${userName} ${userSurname}`;
 
             window.location.href = "home.html";
-
-            return;
         }
 
         const data = await response.json();

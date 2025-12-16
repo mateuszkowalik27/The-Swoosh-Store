@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sign Up - The Swoosh Store</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo.png">
     <link rel="stylesheet" href="../styles/auth/main.css">
+    <link rel="stylesheet" href="../styles/auth/form.css">
     <link rel="stylesheet" href="../styles/auth/password.css">
+    <link rel="stylesheet" href="../styles/auth/error.css">
     <link rel="stylesheet" href="../styles/auth/animations.css">
     <link rel="stylesheet" href="../styles/home/footer.css">
     <script src="../auth/register.js"></script>
@@ -53,14 +56,16 @@
                     <input type="password" id="password_confirmation" placeholder="Confirm your password">
                 </div>
             </div>
+            <div class="error">
+                <div id="error"></div>
+            </div>
             <div>
                 <button type="button" onclick="dataPOST()">SEND</button>
             </div>
             <div class="sign-in">
-                already have an account? <a href="login.html"class="animated-underline sign-in">SIGN IN</a>
+                already have an account? <a href="login.html" class="animated-underline sign-in">SIGN IN</a>
             </div>
         </form>
-        <div id="error" style="color: red;"></div>
     </main>
     <footer>
         <p>Copyright © 2025 Mateusz Kowalik</p>

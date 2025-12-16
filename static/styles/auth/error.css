@@ -1,0 +1,9 @@
+.error {
+    height: 30px;
+    padding-bottom: 3%;
+}
+#error {
+    color: #ff6161;
+    font-size: 115%;
+    font-family: NikeFontLight, serif;
+}

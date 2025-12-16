@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>The Swoosh Store</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/logo.png">
     <link rel="stylesheet" href="../styles/home/main.css">
     <link rel="stylesheet" href="../styles/home/header.css">
+    <link rel="stylesheet" href="../styles/home/profile.css">
     <link rel="stylesheet" href="../styles/home/footer.css">
     <link rel="stylesheet" href="../styles/home/background.css">
     <link rel="stylesheet" href="../styles/home/shoe.css">
@@ -37,8 +39,14 @@
             </div>
             <div class="header-item profile" id="profile-area" style="display:none;">
                 <a href=""><img src="../../assets/images/shopping-bag.png" alt="Shopping Bag"></a>
-                <a href=""><img src="../../assets/images/profile.png" alt="Profile"></a>
-                <a href="#" id="logout-btn">LOGOUT</a>
+                <div class="profile-menu">
+                    <img src="../../assets/images/profile.png" alt="Profile">
+                    <div class="hidden-menu">
+                        <a class="animated-underline">Profile</a>
+                        <a class="animated-underline">Favorites</a>
+                        <button class="animated-underline" onclick="logout()">Logout</button>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="main-container">

@@ -4,14 +4,10 @@
 }
 @keyframes slideDown {
     from {
-        /* Start: tło jest w normalnej pozycji */
         background-position-y: 0;
     }
     to {
-        /* Koniec: tło jest przesunięte w dół o wysokość elementu (100% tła).
-           Ponieważ jest ustawione background-repeat: repeat-y,
-           w tym momencie następuje płynne przejście do ponownego wyświetlenia klatki 'from'. */
-        background-position-y: 1080px; /* Zmiana o 100% wysokości widoku */
+        background-position-y: 1080px;
     }
 }
 body {
@@ -49,43 +45,6 @@ form {
 }
 .title h1 {
     margin: 0;
-}
-.form-item {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 3% 0 3% 0;
-}
-.form-item div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.form-item label {
-    font-size: 130%;
-}
-.form-item input {
-    border: 2px solid white;
-    border-radius: 1rem;
-    padding: 10px;
-    text-align: center;
-    width: 85%;
-    font-size: 115%;
-    background-color: transparent;
-    transition: all 0.2s ease-in-out;
-}
-.form-item input:focus {
-    background-color: white;
-    color: black;
-    outline: none;
-}
-.form-item input:not(:focus) {
-    color: white;
-}
-.form-item input::placeholder {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
 }
 main button {
     font-family: NikeFontLight, serif;
