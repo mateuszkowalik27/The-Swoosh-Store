@@ -11,7 +11,7 @@ body {
     color: white;
 }
 .nike {
-    font-size: 400px;
+    font-size: clamp(300px, 20vw, 1000px);
     margin: 0;
     font-family: NikeFontTitle, serif;
     user-select: none;
@@ -27,7 +27,7 @@ body {
 
 .left-block {
     margin-top: auto;
-    margin-bottom: 30%;
+    margin-bottom: 137px;
     margin-left: 10%;
     float: left;
     font-family: NikeFontLight, serif;
@@ -44,6 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .right-block {
 }
@@ -59,11 +60,12 @@ body {
     font-weight: bold;
     width: 17%;
     height: 40px;
+    min-width: 40px;
     border: 3px solid white;
     border-radius: 1rem;
     text-align: center;
     align-content: center;
-    margin: 0;
+    margin: 2px;
     transition: all 0.2s ease-in-out;
 }
 .size p:hover {

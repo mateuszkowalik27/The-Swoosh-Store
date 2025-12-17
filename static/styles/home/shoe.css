@@ -14,13 +14,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
+    min-width: 500px;
+    min-height: 500px;
+    width: 30vw;
+    height: 30vw;
 }
 .shoe-img {
     user-select: none;
     position: absolute;
-    height: 600px;
+    height: 100%;
     width: auto;
     z-index: 1;
     top: 50%;
