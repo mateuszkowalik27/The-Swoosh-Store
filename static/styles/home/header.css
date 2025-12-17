@@ -20,6 +20,7 @@ header {
 .header-item img{
     height: 85px;
     width: auto;
+    user-select: none;
 }
 .header-item-links {
     display: flex;
@@ -32,6 +33,7 @@ header {
     text-decoration: none;
     font-family: NikeFontLight, serif;
     font-size: 115%;
+    user-select: none;
 }
 .animated-underline {
     position: relative;
@@ -48,7 +50,7 @@ header {
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 2px; /* Grubość linii */
+    height: 2px;
     background-color: white;
     transition: width 0.3s ease-out, left 0.3s ease-out;
 }
@@ -65,6 +67,7 @@ header {
     padding: 10px;
     font-size: 115%;
     transition: all 0.2s ease-in-out;
+    user-select: none;
 }
 .auth a:hover {
     background-color: white;

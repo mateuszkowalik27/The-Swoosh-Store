@@ -18,6 +18,7 @@
     height: 600px;
 }
 .shoe-img {
+    user-select: none;
     position: absolute;
     height: 600px;
     width: auto;
